@@ -59,4 +59,4 @@ El prompt se diseñó contemplando cuatro aspectos clave:
 
 Ingresar en el siguiente enlace:
 
-[Web estatica generada por Gemini](https://thnicolas.github.io/Sitio2/)
+[Web estatica generada por ChatGPT](https://thnicolas.github.io/Sitio2/)
