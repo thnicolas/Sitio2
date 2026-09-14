@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de recetas de cocina">
+    <title>Recetario | Sabores de Casa</title>
+
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="contenedor">
+            <h1>Sabores de Casa</h1>
+            <p>Recetas sencillas para disfrutar todos los días</p>
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar" aria-label="Navegación principal">
+        <div class="contenedor nav-contenido">
+            <a href="#recetas">Recetas</a>
+            <a href="#contacto">Información de contacto</a>
+            <a href="#sobre-mi">Sobre mí</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- CATÁLOGO -->
+        <section id="recetas" class="seccion-recetas">
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+                    <h2>Catálogo de recetas</h2>
+                    <p>Selecciona una categoría para ver sus recetas.</p>
+                </div>
+
+                <!-- CONTROLES DE FILTRADO -->
+                <div class="filtros">
+
+                    <input
+                        type="radio"
+                        name="categoria"
+                        id="mostrar-todas"
+                        checked
+                    >
+                    <label for="mostrar-todas">Todas</label>
+
+                    <input
+                        type="radio"
+                        name="categoria"
+                        id="mostrar-salado"
+                    >
+                    <label for="mostrar-salado">Salado</label>
+
+                    <input
+                        type="radio"
+                        name="categoria"
+                        id="mostrar-dulce"
+                    >
+                    <label for="mostrar-dulce">Dulce</label>
+
+                </div>
+
+                <!-- TARJETAS -->
+                <div class="recetas-grid">
+
+                    <!-- RECETA 1 -->
+                    <article class="tarjeta receta-salada">
+                        <div class="imagen-receta">
+                            <img
+                                src="imágenes/receta1.png"
+                                alt="Pizza casera"
+                            >
+                        </div>
+
+                        <div class="contenido-tarjeta">
+                            <span class="categoria">Salado</span>
+                            <h3>Pizza casera</h3>
+                            <p>
+                                Una pizza sencilla preparada con masa casera,
+                                salsa de tomate y queso.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta1.pdf"
+                                download
+                            >
+                                Descargar receta PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- RECETA 2 -->
+                    <article class="tarjeta receta-salada">
+                        <div class="imagen-receta">
+                            <img
+                                src="imágenes/receta2.png"
+                                alt="Empanadas caseras"
+                            >
+                        </div>
+
+                        <div class="contenido-tarjeta">
+                            <span class="categoria">Salado</span>
+                            <h3>Empanadas caseras</h3>
+                            <p>
+                                Empanadas rellenas de carne, cebolla y
+                                especias, ideales para compartir.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta2.pdf"
+                                download
+                            >
+                                Descargar receta PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- RECETA 3 -->
+                    <article class="tarjeta receta-salada">
+                        <div class="imagen-receta">
+                            <img
+                                src="imágenes/receta3.png"
+                                alt="Tarta de verduras"
+                            >
+                        </div>
+
+                        <div class="contenido-tarjeta">
+                            <span class="categoria">Salado</span>
+                            <h3>Tarta de verduras</h3>
+                            <p>
+                                Una tarta ligera y sabrosa preparada con
+                                verduras de estación.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta3.pdf"
+                                download
+                            >
+                                Descargar receta PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- RECETA 4 -->
+                    <article class="tarjeta receta-dulce">
+                        <div class="imagen-receta">
+                            <img
+                                src="imágenes/receta4.png"
+                                alt="Torta de chocolate"
+                            >
+                        </div>
+
+                        <div class="contenido-tarjeta">
+                            <span class="categoria">Dulce</span>
+                            <h3>Torta de chocolate</h3>
+                            <p>
+                                Una torta húmeda de chocolate perfecta para
+                                acompañar el café.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta4.pdf"
+                                download
+                            >
+                                Descargar receta PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- RECETA 5 -->
+                    <article class="tarjeta receta-dulce">
+                        <div class="imagen-receta">
+                            <img
+                                src="imágenes/receta5.png"
+                                alt="Flan casero"
+                            >
+                        </div>
+
+                        <div class="contenido-tarjeta">
+                            <span class="categoria">Dulce</span>
+                            <h3>Flan casero</h3>
+                            <p>
+                                Clásico flan con caramelo, suave y cremoso,
+                                preparado de manera tradicional.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta5.pdf"
+                                download
+                            >
+                                Descargar receta PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- RECETA 6 -->
+                    <article class="tarjeta receta-dulce">
+                        <div class="imagen-receta">
+                            <img
+                                src="imágenes/receta6.png"
+                                alt="Galletas con chips de chocolate"
+                            >
+                        </div>
+
+                        <div class="contenido-tarjeta">
+                            <span class="categoria">Dulce</span>
+                            <h3>Galletas con chips</h3>
+                            <p>
+                                Galletas caseras crocantes por fuera y suaves
+                                por dentro, con chips de chocolate.
+                            </p>
+
+                            <a
+                                class="boton-pdf"
+                                href="recetarios/receta6.pdf"
+                                download
+                            >
+                                Descargar receta PDF
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="seccion informacion">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <h2>Información de contacto</h2>
+                    <p>
+                        Puedes utilizar el siguiente formulario para
+                        comunicarte con nosotros.
+                    </p>
+                </div>
+
+                <form class="formulario" action="#" method="post">
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Tu nombre"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="tu@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="6"
+                            placeholder="Escribe tu mensaje..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="boton-enviar">
+                        Enviar mensaje
+                    </button>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi" class="seccion sobre-mi">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <h2>Sobre mí</h2>
+                </div>
+
+                <div class="sobre-mi-contenido">
+                    <div class="avatar">
+                        <span>👨‍🍳</span>
+                    </div>
+
+                    <div>
+                        <h3>El mantenedor del sitio</h3>
+                        <p>
+                            Soy el responsable de mantener y actualizar
+                            este recetario. El objetivo de este sitio es
+                            reunir recetas sencillas, prácticas y deliciosas
+                            para cocinar en casa.
+                        </p>
+
+                        <p>
+                            Las recetas se organizan en categorías para
+                            facilitar su consulta y cada una dispone de su
+                            correspondiente archivo PDF.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="contenedor">
+            <p>
+                &copy; 2026 Sabores de Casa. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
