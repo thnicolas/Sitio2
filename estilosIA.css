@@ -5,35 +5,37 @@
 
 * {
     box-sizing: border-box;
+
     margin: 0;
     padding: 0;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f4ef;
-    color: #263238;
+
+    background-color: #f4f7f4;
+
+    color: #26352b;
+
     line-height: 1.6;
 }
 
-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-a {
-    color: inherit;
-}
+/* =========================================
+   CONTENEDOR
+   ========================================= */
 
 .contenedor {
-    width: 92%;
-    max-width: 1100px;
+    width: 90%;
+
+    max-width: 1200px;
+
     margin: 0 auto;
 }
 
@@ -43,19 +45,31 @@ a {
    ========================================= */
 
 .encabezado {
-    padding: 55px 20px;
-    background: linear-gradient(135deg, #294936, #3f6b4d);
+    background: linear-gradient(
+        135deg,
+        #294936,
+        #527a5d
+    );
+
     color: #ffffff;
+
     text-align: center;
+
+    padding: 70px 20px;
 }
+
 
 .encabezado h1 {
-    margin-bottom: 8px;
-    font-size: 3rem;
+    font-size: 42px;
+
+    margin-bottom: 12px;
 }
 
+
 .encabezado p {
-    font-size: 1.1rem;
+    font-size: 18px;
+
+    opacity: 0.95;
 }
 
 
@@ -65,38 +79,45 @@ a {
 
 .navbar {
     position: sticky;
+
     top: 0;
+
     z-index: 100;
 
     background-color: #ffffff;
-    border-bottom: 1px solid #dce3df;
 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid #dce5de;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
+
 
 .nav-contenido {
-    min-height: 60px;
-
     display: flex;
+
     justify-content: center;
+
     align-items: center;
-    gap: 10px;
+
+    gap: 35px;
+
+    min-height: 65px;
 }
+
 
 .navbar a {
-    padding: 10px 18px;
-
-    border-radius: 6px;
-
     color: #294936;
 
-    font-weight: bold;
     text-decoration: none;
+
+    font-weight: bold;
+
+    transition: color 0.25s ease;
 }
 
+
 .navbar a:hover {
-    background-color: #e8f0ea;
-    color: #183622;
+    color: #6c9275;
 }
 
 
@@ -105,26 +126,30 @@ a {
    ========================================= */
 
 .seccion {
-    padding: 70px 0;
+    padding: 80px 0;
 }
 
-.seccion-recetas {
-    padding: 70px 0 80px;
-}
 
 .titulo-seccion {
-    margin-bottom: 35px;
     text-align: center;
+
+    margin-bottom: 35px;
 }
+
 
 .titulo-seccion h2 {
-    margin-bottom: 8px;
     color: #294936;
-    font-size: 2.4rem;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
 }
 
+
 .titulo-seccion p {
-    color: #60706a;
+    color: #66736a;
+
+    font-size: 16px;
 }
 
 
@@ -133,8 +158,10 @@ a {
    ========================================= */
 
 /*
-   Los radio buttons están ocultos visualmente,
-   pero siguen funcionando.
+   Los radio buttons siguen existiendo y
+   mantienen toda su funcionalidad.
+
+   Solamente se ocultan visualmente.
 */
 
 #cat-todos,
@@ -146,75 +173,102 @@ a {
     height: 1px;
 
     opacity: 0;
+
+    pointer-events: none;
 }
 
 
 /* =========================================
-   BOTONES DE CATEGORÍA
+   BOTONES DE FILTRO
    ========================================= */
 
-.filtros {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    flex-wrap: wrap;
-    gap: 10px;
-
-    margin-bottom: 40px;
-}
-
-.filtros label {
+.filtro-label {
     display: inline-block;
 
-    padding: 10px 22px;
+    padding: 11px 24px;
+
+    margin: 0 6px 40px 0;
 
     background-color: #ffffff;
 
     border: 2px solid #b9c8bd;
+
     border-radius: 30px;
 
     color: #365342;
 
-    font-weight: bold;
+    font-size: 15px;
+
+    font-weight: 600;
 
     cursor: pointer;
-}
 
-.filtros label:hover {
-    background-color: #e8f0ea;
-}
-
-
-/*
-   Color del botón seleccionado.
-
-   Como cada radio está inmediatamente antes
-   de su label, podemos usar el selector +.
-*/
-
-#cat-todos:checked + label,
-#cat-salado:checked + label,
-#cat-dulce:checked + label {
-    background-color: #294936;
-    border-color: #294936;
-    color: #ffffff;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 
 /* =========================================
-   FILTRADO DE RECETAS
+   HOVER DE LOS BOTONES
+   ========================================= */
+
+.filtro-label:hover {
+    background-color: #e8f0ea;
+
+    border-color: #6f8f79;
+
+    color: #294936;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px rgba(41, 73, 54, 0.12);
+}
+
+
+/* =========================================
+   BOTÓN ACTIVO
+   ========================================= */
+
+#cat-todos:checked + label[for="cat-todos"],
+#cat-salado:checked + label[for="cat-salado"],
+#cat-dulce:checked + label[for="cat-dulce"] {
+    background-color: #294936;
+
+    border-color: #294936;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 4px 12px rgba(41, 73, 54, 0.25);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   HOVER DEL BOTÓN ACTIVO
+   ========================================= */
+
+#cat-todos:checked + label[for="cat-todos"]:hover,
+#cat-salado:checked + label[for="cat-salado"]:hover,
+#cat-dulce:checked + label[for="cat-dulce"]:hover {
+    background-color: #365f45;
+
+    border-color: #365f45;
+}
+
+
+/* =========================================
+   FILTRADO CSS
    ========================================= */
 
 /*
-   TODAS
-   No ocultamos ninguna tarjeta.
-*/
-
-
-/*
-   SALADAS
-   Si cat-salado está seleccionado,
+   Cuando se selecciona "Saladas",
    se ocultan las recetas dulces.
 */
 
@@ -224,8 +278,7 @@ a {
 
 
 /*
-   DULCES
-   Si cat-dulce está seleccionado,
+   Cuando se selecciona "Dulces",
    se ocultan las recetas saladas.
 */
 
@@ -234,16 +287,24 @@ a {
 }
 
 
+/*
+   "Todas" no necesita ninguna regla.
+   Al estar seleccionada, todas las recetas
+   permanecen visibles.
+*/
+
+
 /* =========================================
-   GRID DE RECETAS
+   GRILLA DE RECETAS
    ========================================= */
 
 .recetas-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
-    gap: 28px;
+    gap: 30px;
 }
 
 
@@ -252,82 +313,79 @@ a {
    ========================================= */
 
 .tarjeta {
-    display: flex;
-    flex-direction: column;
-
-    overflow: hidden;
-
     background-color: #ffffff;
 
-    border: 1px solid #d5dfd8;
-    border-radius: 14px;
+    border: 1px solid #dce5de;
 
-    box-shadow: 0 5px 18px rgba(38, 50, 56, 0.08);
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
+
 
 .tarjeta:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 
-    box-shadow: 0 10px 25px rgba(38, 50, 56, 0.13);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 
-/* =========================================
-   IMÁGENES
-   ========================================= */
+.tarjeta img {
+    display: block;
 
-.imagen-receta {
-    height: 220px;
-    overflow: hidden;
-    background-color: #e5ebe7;
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
 }
 
-
-/* =========================================
-   CONTENIDO DE LAS TARJETAS
-   ========================================= */
 
 .contenido-tarjeta {
-    display: flex;
-    flex-direction: column;
-
-    flex: 1;
-
-    padding: 22px;
+    padding: 25px;
 }
+
 
 .categoria {
     display: inline-block;
 
-    align-self: flex-start;
-
-    padding: 4px 10px;
     margin-bottom: 10px;
 
-    border-radius: 15px;
+    padding: 5px 12px;
 
     background-color: #e8f0ea;
 
-    color: #31583e;
+    border-radius: 20px;
 
-    font-size: 0.78rem;
+    color: #365342;
+
+    font-size: 13px;
+
     font-weight: bold;
-
-    text-transform: uppercase;
 }
+
 
 .contenido-tarjeta h3 {
-    margin-bottom: 8px;
+    color: #294936;
 
-    color: #263f30;
+    font-size: 23px;
 
-    font-size: 1.4rem;
+    margin-bottom: 10px;
 }
 
-.contenido-tarjeta p {
-    margin-bottom: 20px;
 
-    color: #60706a;
+.contenido-tarjeta p {
+    color: #66736a;
+
+    margin-bottom: 20px;
 }
 
 
@@ -336,56 +394,68 @@ a {
    ========================================= */
 
 .boton-pdf {
-    display: block;
+    display: inline-block;
 
-    margin-top: auto;
+    padding: 10px 20px;
 
-    padding: 11px 15px;
+    background-color: #294936;
 
-    background-color: #c66a32;
-
-    border-radius: 7px;
+    border-radius: 8px;
 
     color: #ffffff;
 
+    text-decoration: none;
+
     font-weight: bold;
 
-    text-align: center;
-    text-decoration: none;
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
 }
 
+
 .boton-pdf:hover {
-    background-color: #a95324;
+    background-color: #365f45;
+
+    transform: translateY(-2px);
 }
 
 
 /* =========================================
-   CONTACTO
+   SECCIÓN CONTACTO
    ========================================= */
 
-.informacion {
-    background-color: #edf2ee;
+.seccion-contacto {
+    background-color: #eaf1ec;
 }
+
+
+/* =========================================
+   FORMULARIO
+   ========================================= */
 
 .formulario {
     width: 100%;
+
     max-width: 700px;
 
     margin: 0 auto;
 
-    padding: 30px;
+    padding: 35px;
 
     background-color: #ffffff;
 
-    border: 1px solid #d5dfd8;
-    border-radius: 14px;
+    border-radius: 16px;
 
-    box-shadow: 0 5px 18px rgba(38, 50, 56, 0.07);
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
 }
+
 
 .campo {
     margin-bottom: 20px;
 }
+
 
 .campo label {
     display: block;
@@ -397,36 +467,50 @@ a {
     font-weight: bold;
 }
 
+
 .campo input,
 .campo textarea {
     width: 100%;
 
     padding: 12px 14px;
 
-    border: 1px solid #bcc9c0;
-    border-radius: 7px;
+    border: 1px solid #bdc9c0;
 
-    background-color: #fafcfa;
+    border-radius: 8px;
 
-    color: #263238;
+    background-color: #ffffff;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    color: #26352b;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-.campo textarea {
-    min-height: 130px;
-    resize: vertical;
-}
 
 .campo input:focus,
 .campo textarea:focus {
-    outline: none;
+    border-color: #527a5d;
 
-    border-color: #527b5f;
-
-    box-shadow: 0 0 0 3px rgba(82, 123, 95, 0.15);
+    box-shadow:
+        0 0 0 3px rgba(82, 122, 93, 0.15);
 }
+
+
+.campo textarea {
+    resize: vertical;
+}
+
+
+/* =========================================
+   BOTÓN ENVIAR
+   ========================================= */
 
 .boton-enviar {
     width: 100%;
@@ -434,21 +518,29 @@ a {
     padding: 13px 20px;
 
     border: none;
-    border-radius: 7px;
+
+    border-radius: 8px;
 
     background-color: #294936;
 
     color: #ffffff;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
 }
 
+
 .boton-enviar:hover {
-    background-color: #1d3828;
+    background-color: #365f45;
+
+    transform: translateY(-2px);
 }
 
 
@@ -456,57 +548,58 @@ a {
    SOBRE MÍ
    ========================================= */
 
-.sobre-mi {
-    background-color: #ffffff;
-}
-
 .sobre-mi-contenido {
-    width: 100%;
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
     max-width: 850px;
 
     margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns: 160px 1fr;
-
-    gap: 35px;
-
-    align-items: center;
 }
 
-.avatar {
-    width: 160px;
-    height: 160px;
 
+.avatar {
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
-    border-radius: 50%;
+    flex-shrink: 0;
+
+    width: 150px;
+
+    height: 150px;
 
     background-color: #e8f0ea;
 
-    border: 5px solid #d3e1d6;
+    border-radius: 50%;
+
+    border: 4px solid #c5d5c9;
 }
+
 
 .avatar span {
-    font-size: 4rem;
+    font-size: 70px;
 }
 
+
 .texto-sobre-mi h3 {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
     color: #294936;
 
-    font-size: 1.5rem;
+    font-size: 25px;
 }
+
 
 .texto-sobre-mi p {
     margin-bottom: 12px;
 
-    color: #60706a;
+    color: #66736a;
 }
 
 
@@ -515,103 +608,116 @@ a {
    ========================================= */
 
 .footer {
-    padding: 30px 0;
+    padding: 30px 20px;
 
-    background-color: #263d2d;
+    background-color: #20382a;
 
     color: #ffffff;
 
     text-align: center;
 }
 
+
 .footer p {
-    font-size: 0.9rem;
+    font-size: 14px;
+
+    opacity: 0.9;
 }
 
 
 /* =========================================
-   TABLETS
+   TABLET
    ========================================= */
 
 @media (max-width: 900px) {
 
+    .encabezado h1 {
+        font-size: 34px;
+    }
+
+
     .recetas-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .sobre-mi-contenido {
+        max-width: 700px;
     }
 
 }
 
 
 /* =========================================
-   MÓVILES
+   CELULAR
    ========================================= */
 
 @media (max-width: 600px) {
 
     .encabezado {
-        padding: 40px 15px;
+        padding: 50px 20px;
     }
+
 
     .encabezado h1 {
-        font-size: 2.2rem;
+        font-size: 28px;
     }
 
-    .navbar {
-        position: static;
+
+    .encabezado p {
+        font-size: 16px;
     }
+
 
     .nav-contenido {
         flex-direction: column;
 
-        padding: 10px 0;
+        gap: 12px;
+
+        padding: 15px 0;
     }
 
-    .navbar a {
-        width: 100%;
 
-        text-align: center;
+    .seccion {
+        padding: 55px 0;
     }
 
-    .seccion,
-    .seccion-recetas {
-        padding: 50px 0;
+
+    .titulo-seccion h2 {
+        font-size: 27px;
     }
+
+
+    .filtro-label {
+        margin-bottom: 10px;
+    }
+
 
     .recetas-grid {
         grid-template-columns: 1fr;
-
-        gap: 22px;
     }
 
-    .imagen-receta {
-        height: 210px;
+
+    .tarjeta img {
+        height: 220px;
     }
 
-    .filtros {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-    .filtros label {
-        width: 100%;
-
-        text-align: center;
-    }
 
     .formulario {
-        padding: 22px;
+        padding: 25px 20px;
     }
 
+
     .sobre-mi-contenido {
-        grid-template-columns: 1fr;
+        flex-direction: column;
 
         text-align: center;
     }
 
-    .avatar {
-        margin: 0 auto;
+
+    .texto-sobre-mi h3 {
+        font-size: 22px;
     }
 
 }
-

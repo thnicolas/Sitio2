@@ -18,6 +18,7 @@
          ========================================= -->
 
     <header class="encabezado">
+
         <div class="contenedor">
 
             <h1>Recetario de recetas caseras</h1>
@@ -27,6 +28,7 @@
             </p>
 
         </div>
+
     </header>
 
 
@@ -38,7 +40,9 @@
 
         <div class="contenedor nav-contenido">
 
-            <a href="#recetas">Recetas</a>
+            <a href="#recetas">
+                Recetas
+            </a>
 
             <a href="#contacto">
                 Información de contacto
@@ -56,7 +60,7 @@
     <main>
 
         <!-- =========================================
-             SECCIÓN RECETAS
+             CATÁLOGO DE RECETAS
              ========================================= -->
 
         <section id="recetas" class="seccion">
@@ -65,7 +69,9 @@
 
                 <div class="titulo-seccion">
 
-                    <h2>Catálogo de recetas</h2>
+                    <h2>
+                        Catálogo de recetas
+                    </h2>
 
                     <p>
                         Selecciona una categoría para ver las recetas.
@@ -75,10 +81,7 @@
 
 
                 <!-- =====================================
-                     FILTROS
-                     IMPORTANTE:
-                     Los radio y sus label son hermanos
-                     directos de .recetas-grid
+                     FILTROS CSS
                      ===================================== -->
 
                 <input
@@ -133,7 +136,6 @@
 
                     <!-- =================================
                          RECETA 1
-                         SALADA
                          ================================= -->
 
                     <article class="tarjeta receta-salada">
@@ -173,7 +175,6 @@
 
                     <!-- =================================
                          RECETA 2
-                         SALADA
                          ================================= -->
 
                     <article class="tarjeta receta-salada">
@@ -213,7 +214,6 @@
 
                     <!-- =================================
                          RECETA 3
-                         SALADA
                          ================================= -->
 
                     <article class="tarjeta receta-salada">
@@ -253,7 +253,6 @@
 
                     <!-- =================================
                          RECETA 4
-                         DULCE
                          ================================= -->
 
                     <article class="tarjeta receta-dulce">
@@ -293,7 +292,6 @@
 
                     <!-- =================================
                          RECETA 5
-                         DULCE
                          ================================= -->
 
                     <article class="tarjeta receta-dulce">
@@ -333,7 +331,6 @@
 
                     <!-- =================================
                          RECETA 6
-                         DULCE
                          ================================= -->
 
                     <article class="tarjeta receta-dulce">
@@ -378,10 +375,13 @@
 
 
         <!-- =========================================
-             INFORMACIÓN DE CONTACTO
+             CONTACTO
              ========================================= -->
 
-        <section id="contacto" class="seccion seccion-contacto">
+        <section
+            id="contacto"
+            class="seccion seccion-contacto"
+        >
 
             <div class="contenedor">
 
@@ -497,7 +497,6 @@
 
                 <div class="sobre-mi-contenido">
 
-
                     <div class="avatar">
 
                         <span>
@@ -557,21 +556,3 @@
 
 </html>
 ```
-
-**Importante:** este `index.html` está preparado para el CSS de la última modificación. En particular, **no pongas los tres `<input>` dentro de un `<div class="filtros">`**, porque eso volvería a romper el selector `~` del filtrado.
-
-Además, los nombres de archivos deben coincidir exactamente:
-
-```text
-imágenes/receta1.png
-imágenes/receta2.png
-...
-imágenes/receta6.png
-
-recetarios/receta1.pdf
-recetarios/receta2.pdf
-...
-recetarios/receta6.pdf
-```
-
-Si tus archivos realmente se llaman `receta 1.png` (con espacio), habría que modificar también las rutas del HTML.
