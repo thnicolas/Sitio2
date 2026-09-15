@@ -82,57 +82,54 @@
                      FILTROS
 
                      IMPORTANTE:
-                     Los inputs y labels siguen siendo
-                     hermanos directos de .recetas-grid.
-                     Esto permite que el filtrado CSS
-                     continúe funcionando.
+                     Los inputs, labels y .recetas-grid
+                     son hermanos directos.
+
+                     Esto permite que el selector CSS
+                     "~" funcione correctamente.
                      ===================================== -->
 
-                <div class="filtros">
+                <input
+                    type="radio"
+                    name="categoria"
+                    id="cat-todos"
+                    checked
+                >
 
-                    <input
-                        type="radio"
-                        name="categoria"
-                        id="cat-todos"
-                        checked
-                    >
-
-                    <label
-                        class="filtro-label"
-                        for="cat-todos"
-                    >
-                        Todas
-                    </label>
+                <label
+                    class="filtro-label"
+                    for="cat-todos"
+                >
+                    Todas
+                </label>
 
 
-                    <input
-                        type="radio"
-                        name="categoria"
-                        id="cat-salado"
-                    >
+                <input
+                    type="radio"
+                    name="categoria"
+                    id="cat-salado"
+                >
 
-                    <label
-                        class="filtro-label"
-                        for="cat-salado"
-                    >
-                        Saladas
-                    </label>
+                <label
+                    class="filtro-label"
+                    for="cat-salado"
+                >
+                    Saladas
+                </label>
 
 
-                    <input
-                        type="radio"
-                        name="categoria"
-                        id="cat-dulce"
-                    >
+                <input
+                    type="radio"
+                    name="categoria"
+                    id="cat-dulce"
+                >
 
-                    <label
-                        class="filtro-label"
-                        for="cat-dulce"
-                    >
-                        Dulces
-                    </label>
-
-                </div>
+                <label
+                    class="filtro-label"
+                    for="cat-dulce"
+                >
+                    Dulces
+                </label>
 
 
                 <!-- =====================================
