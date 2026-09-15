@@ -40,9 +40,7 @@
 
         <div class="contenedor nav-contenido">
 
-            <a href="#recetas">
-                Recetas
-            </a>
+            <a href="#recetas">Recetas</a>
 
             <a href="#contacto">
                 Información de contacto
@@ -60,7 +58,7 @@
     <main>
 
         <!-- =========================================
-             CATÁLOGO DE RECETAS
+             RECETAS
              ========================================= -->
 
         <section id="recetas" class="seccion">
@@ -81,50 +79,60 @@
 
 
                 <!-- =====================================
-                     FILTROS CSS
+                     FILTROS
+
+                     IMPORTANTE:
+                     Los inputs y labels siguen siendo
+                     hermanos directos de .recetas-grid.
+                     Esto permite que el filtrado CSS
+                     continúe funcionando.
                      ===================================== -->
 
-                <input
-                    type="radio"
-                    name="categoria"
-                    id="cat-todos"
-                    checked
-                >
+                <div class="filtros">
 
-                <label
-                    class="filtro-label"
-                    for="cat-todos"
-                >
-                    Todas
-                </label>
+                    <input
+                        type="radio"
+                        name="categoria"
+                        id="cat-todos"
+                        checked
+                    >
 
-
-                <input
-                    type="radio"
-                    name="categoria"
-                    id="cat-salado"
-                >
-
-                <label
-                    class="filtro-label"
-                    for="cat-salado"
-                >
-                    Saladas
-                </label>
+                    <label
+                        class="filtro-label"
+                        for="cat-todos"
+                    >
+                        Todas
+                    </label>
 
 
-                <input
-                    type="radio"
-                    name="categoria"
-                    id="cat-dulce"
-                >
+                    <input
+                        type="radio"
+                        name="categoria"
+                        id="cat-salado"
+                    >
 
-                <label
-                    class="filtro-label"
-                    for="cat-dulce"
-                >
-                    Dulces
-                </label>
+                    <label
+                        class="filtro-label"
+                        for="cat-salado"
+                    >
+                        Saladas
+                    </label>
+
+
+                    <input
+                        type="radio"
+                        name="categoria"
+                        id="cat-dulce"
+                    >
+
+                    <label
+                        class="filtro-label"
+                        for="cat-dulce"
+                    >
+                        Dulces
+                    </label>
+
+                </div>
 
 
                 <!-- =====================================
@@ -134,9 +142,7 @@
                 <div class="recetas-grid">
 
 
-                    <!-- =================================
-                         RECETA 1
-                         ================================= -->
+                    <!-- RECETA 1 -->
 
                     <article class="tarjeta receta-salada">
 
@@ -173,9 +179,7 @@
                     </article>
 
 
-                    <!-- =================================
-                         RECETA 2
-                         ================================= -->
+                    <!-- RECETA 2 -->
 
                     <article class="tarjeta receta-salada">
 
@@ -212,9 +216,7 @@
                     </article>
 
 
-                    <!-- =================================
-                         RECETA 3
-                         ================================= -->
+                    <!-- RECETA 3 -->
 
                     <article class="tarjeta receta-salada">
 
@@ -251,9 +253,7 @@
                     </article>
 
 
-                    <!-- =================================
-                         RECETA 4
-                         ================================= -->
+                    <!-- RECETA 4 -->
 
                     <article class="tarjeta receta-dulce">
 
@@ -290,9 +290,7 @@
                     </article>
 
 
-                    <!-- =================================
-                         RECETA 5
-                         ================================= -->
+                    <!-- RECETA 5 -->
 
                     <article class="tarjeta receta-dulce">
 
@@ -329,9 +327,7 @@
                     </article>
 
 
-                    <!-- =================================
-                         RECETA 6
-                         ================================= -->
+                    <!-- RECETA 6 -->
 
                     <article class="tarjeta receta-dulce">
 
@@ -536,7 +532,7 @@
 
 
     <!-- =========================================
-         PIE DE PÁGINA
+         FOOTER
          ========================================= -->
 
     <footer class="footer">
